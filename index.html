@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Ensures <html> and <body> extend to full height of the viewport */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        .card-container {
+            display: grid;
+            height: max-content;
+            text-align: center;
+            place-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            /* Add padding to avoid cards hitting screen edges */
+            padding: 10px;
+            align-items: start;
+            /* Ensure each card starts at the top and has independent height */
+        }
+
+
+        .card {
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            margin: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .product-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-info {
+            padding: 10px;
+            /* background-color: #f0f0f0; */
+            border-radius: 5px;
+        }
+
+        .product-info p {
+            font-size: 0.9rem;
+            text-align: left;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-info ul {
+            list-style-type: disc;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .product-info li {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .card-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            align-items: flex-end;
+        }
+
+        .card-buttons button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-now {
+            background-color: #FFA500;
+            /* Orange color */
+            color: white;
+        }
+
+        .add-to-cart {
+            background-color: #007bff;
+            /* Blue color */
+            color: white;
+        }
+
+        .card-buttons button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 639px) {
+            .card-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card-buttons button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Apple Product Line</h1>
+    <div class="card-container">
+        <div class="card card-1">
+            <img src="./images/m1.png" alt="macbook-m1">
+            <h3 class="product-title">Apple MacBook Air M1</h3>
+            <div class="product-info">
+                <p>The Apple MacBook Air M1 redefines lightweight performance with its powerful M1 chip.</p>
+                <ul>
+                    <li>Powerful M1 chip for fast performance</li>
+                    <li>13-inch Retina display</li>
+                    <li>8GB RAM, 256GB SSD</li>
+                    <li>Up to 18 hours battery life</li>
+                </ul>
+            </div>
+            <div class="card-buttons">
+                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card card-2">
+            <img src="./images/ipad.png" alt="ipad-m4">
+            <h3 class="product-title">Apple iPad Pro M4</h3>
+            <div class="product-info">
+                <p>The Apple iPad Pro M4 is a powerhouse tablet with the M4 chip, delivering lightning-fast performance.</p>
+                <ul>
+                    <li>Advanced M4 chip for incredible speed</li>
+                    <li>12.9-inch Liquid Retina XDR display</li>
+                    <li>Up to 16GB RAM, 2TB storage</li>
+                    <li>Supports Apple Pencil and Magic Keyboard</li>
+                </ul>
+            </div>
+            <div class="card-buttons">
+                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card card-3">
+            <img src="./images/mac-mini.png" alt="mac-mini" style="margin-bottom: 0;">
+            <h3 class="product-title">Apple M4 Mac Mini</h3>
+            <div class="product-info">
+                <p>The Apple M4 Mac Mini combines the might of the M4 chip in a compact form factor.</p>
+                <ul>
+                    <li>Compact design with M4 chip</li>
+                    <li>8-core CPU, 10-core GPU for efficient multitasking</li>
+                    <li>Configurable up to 64GB RAM, 8TB SSD</li>
+                    <li>Ideal for workstations and creative tasks</li>
+                </ul>
+            </div>
+            <div class="card-buttons">
+                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card card-4">
+            <img src="./images/iphone-16.png" alt="iphone-16" style="width: 150px;">
+            <h3 class="product-title">Apple iPhone 16</h3>
+            <div class="product-info">
+                <p>The Apple iPhone 16 brings cutting-edge technology with the A17 Bionic chip.</p>
+                <ul>
+                    <li>A17 Bionic chip for lightning-fast performance</li>
+                    <li>6.7-inch Super Retina XDR display</li>
+                    <li>48MP main camera, advanced Night Mode</li>
+                    <li>All-day battery with MagSafe charging</li>
+                </ul>
+            </div>
+            <div class="card-buttons">
+                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
