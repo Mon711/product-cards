@@ -1,4 +1,5 @@
 # Apple Products Showcase
+Visit this project's website at: https://mon711.github.io/product-cards/
 A product showcase for various Apple products using CSS Grid
 
 ## Features
